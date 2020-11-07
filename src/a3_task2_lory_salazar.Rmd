@@ -102,7 +102,6 @@ sw_skin_sep <- starwars %>%
            sep = ",",
            extra = "merge",
            remove = FALSE)
-
 ```
 
 ### 2. `tidyr::unite()`
@@ -137,7 +136,12 @@ In the code chunk below, starting from the `mpg` data create a new data frame ca
 
 ```{r}
 # Your code here: 
-
+mpg_model_class <- mpg %>% 
+  unite(col = model_class,
+        c(model, class),
+        sep = "-",
+        remove = FALSE
+        )
 
 ```
 
